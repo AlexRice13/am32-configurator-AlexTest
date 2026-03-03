@@ -626,15 +626,15 @@ const protocolOptions = [
 ];
 
 const demagOptions = [
-    {
+    { // firmware threshold: 255 (no compensation)
         value: 1,
         label: 'Off'
     },
-    {
+    { // firmware threshold: 160
         value: 2,
         label: 'Low'
     },
-    {
+    { // firmware threshold: 130
         value: 3,
         label: 'High'
     }
