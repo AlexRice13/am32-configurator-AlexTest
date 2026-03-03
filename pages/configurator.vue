@@ -175,6 +175,15 @@
                     />
                     <SettingField
                       :esc-info="escStore.selectedEscInfo"
+                      field="DEMAG_COMP"
+                      name="Demag compensation"
+                      type="select"
+                      :options="demagOptions"
+                      placeholder="Select demag compensation"
+                      @change="onSettingsChange"
+                    />
+                    <SettingField
+                      :esc-info="escStore.selectedEscInfo"
                       field="STARTUP_POWER"
                       name="Startup power"
                       type="number"
@@ -613,6 +622,21 @@ const protocolOptions = [
     {
         value: 4,
         label: 'EDT ARM'
+    }
+];
+
+const demagOptions = [
+    { // firmware threshold: 255 (no compensation)
+        value: 1,
+        label: 'Off'
+    },
+    { // firmware threshold: 160
+        value: 2,
+        label: 'Low'
+    },
+    { // firmware threshold: 130
+        value: 3,
+        label: 'High'
     }
 ];
 

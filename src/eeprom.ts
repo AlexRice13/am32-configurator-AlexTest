@@ -22,6 +22,10 @@ export const EepromLayout = {
         offset: 0x02,
         size: 1
     },
+    DEMAG_COMP: {
+        offset: 0x02,
+        size: 1
+    },
     MAIN_REVISION: {
         offset: 0x03,
         size: 1
