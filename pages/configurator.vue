@@ -175,6 +175,15 @@
                     />
                     <SettingField
                       :esc-info="escStore.selectedEscInfo"
+                      field="DEMAG_COMP"
+                      name="Demag compensation"
+                      type="select"
+                      :options="demagOptions"
+                      placeholder="Select demag compensation"
+                      @change="onSettingsChange"
+                    />
+                    <SettingField
+                      :esc-info="escStore.selectedEscInfo"
                       field="STARTUP_POWER"
                       name="Startup power"
                       type="number"
@@ -613,6 +622,21 @@ const protocolOptions = [
     {
         value: 4,
         label: 'EDT ARM'
+    }
+];
+
+const demagOptions = [
+    {
+        value: 1,
+        label: 'Off'
+    },
+    {
+        value: 2,
+        label: 'Low'
+    },
+    {
+        value: 3,
+        label: 'High'
     }
 ];
 
